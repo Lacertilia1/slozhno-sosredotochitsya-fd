@@ -1,5 +1,264 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: grid;
+  gap: 40px;
+  background-color: var(--color-bg-cover, #00042b);
+  background-image: var(--img-bg-cover, url(../images/cover-image-dark.png));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Заголовки */
+
+.title {
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size, 18px);
+}
+
+.subtitle {
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.title-decor {
+  color: var(--color-secondary, #000028);
+  background-color: var(--color-accent, #ff0070);
+}
+
+.title-normal {
+  font-weight: var(--font-weight-regular, 400);
+}
+
+/* Ссылки */
+
+.link {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--color-accent, #282828);
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus-visible {
+  border: 1px solid currentColor;
+}
+
+/* Шапка  */
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  row-gap: 60px;
+  height: 100vh;
+  min-height: 668px;
+  padding: 65px var(--spacing-padding);
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__title {
+  color: var(--color-accent-alt, #db00ff);
+  font-size: var(
+    --font-size-title,
+    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
+  );
+  line-height: 0.83;
+  text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
+}
+
+.header__rec {
+  position: absolute;
+  top: var(--spacing-padding);
+  right: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent, #ff0070);
+}
+
+.header__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px currentColor;
+  background-color: currentColor;
+}
+
+@media (width >= 768px) {
+
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 170px;
+    grid-template-areas:
+      '.             theme-menu'
+      'header__title header__title'
+      '.             header__subtitle';
+    padding: 192px var(--spacing-padding);
+  }
+
+  .header__theme-menu {
+    grid-area: theme-menu;
+  }
+
+  .header__title {
+    grid-area: header__title;
+  }
+
+  .header__subtitle {
+    grid-area: header__subtitle;
+  }
+}
+
+/* Декоративные элементы */
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  bottom: var(--spacing-padding);
+  left: var(--spacing-padding);
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid var(--color-accent, #ff0070);
+  border-left: 1px solid var(--color-accent, #ff0070);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  top: var(--spacing-padding);
+  right: var(--spacing-padding);
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--color-accent, #ff0070);
+  border-right: 1px solid var(--color-accent, #ff0070);
+}
+
+/* Главная */
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+/* Cекция */
+
+.section {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 20px;
+  padding: 0 var(--spacing-padding);
+}
+
+.section__title {
+  color: var(--color-accent, #ff0070);
+}
+
+.section__subtitle {
+  font-size: var(--font-size, 18px);
+}
+
+@media (width >= 768px) {
+
+  .section {
+    grid-template-columns: calc((768px - 40px - 20px) / 3) 1fr;
+  }
+
+  .section__title {
+    grid-row: 1 / -1;
+  }
+}
+
+/* Карточка */
+
+.card-list {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+
+  .card-list {
+    grid-column: 2;
+  }
+}
+/* Галерея */
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  padding: 0 var(--spacing-padding);
+}
+
+@media (width >= 768px) {
+
+  .gallery {
+    grid-template-areas:
+      "title  title  title"
+      "sunset sunset ice-cream"
+      "tape   books  ice-cream"
+      "tape   street street";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+  }
+
+  .gallery__title {
+    grid-area: title;
+  }
+
+  .gallery__image--sunset {
+    grid-area: sunset;
+  }
+
+  .gallery__image--ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .gallery__image--tape {
+    grid-area: tape;
+  }
+
+  .gallery__image--books {
+    grid-area: books;
+  }
+
+  .gallery__image--street {
+    grid-area: street;
+  }
+}
+
+/* Футер */
+
+.footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  color: var(--color-accent-alt, #db00ff);
+  font-size: var(
+    --font-size-title,
+    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
+  );
+  line-height: 0.83;
+  text-shadow: 2px 2px 0 var(--color-accent, #ff0070);
 }
