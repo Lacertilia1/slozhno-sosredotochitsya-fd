@@ -1,8 +1,12 @@
 :root {
+  /* Расположить переменные в порядке PostCSS Sorting */
   --color-accent: #ff0070;
   --color-accent-alt: #db00ff;
   --color-primary: #f1b2ce;
   --color-secondary: #000028;
+  --color-section-title: #ff0070;
+  --color-theme-button: #ff0070;
+
   --color-bg: #00042b;
 
   --font-family: 'IBM Plex mono', monospace;
@@ -19,8 +23,10 @@
 
 @media (width >= 768px) {
 
-  :root { 
+  :root {
     --spacing-padding: 20px;
+
+    --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
