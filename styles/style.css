@@ -271,10 +271,10 @@
 
 .reasons {
   display: grid;
-  gap: 20px;
   grid-template-areas:
     'title'
     'card-list';
+  gap: 20px;
 }
 
 .reasons__title {
@@ -307,10 +307,10 @@
 
 .distractions {
   display: grid;
-  gap: 20px;
   grid-template-areas:
     'title'
     'card-list';
+  gap: 20px;
 }
 
 .distractions__title {
@@ -349,11 +349,11 @@
 
 .tips {
   display: grid;
-  gap: 20px;
   grid-template-areas:
     'title'
     'subtitle'
     'card-list';
+  gap: 20px;
 }
 
 .tips__title {
