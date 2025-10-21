@@ -1,14 +1,15 @@
 :root {
-  /* Расположить переменные в порядке PostCSS Sorting */
-  --color-accent: #ff0070;
-  --color-accent-alt: #db00ff;
+  /* Цвета */
   --color-primary: #f1b2ce;
   --color-secondary: #000028;
+  --color-accent: #ff0070;
+  --color-accent-alt: #db00ff;
   --color-section-title: #ff0070;
   --color-theme-button: #ff0070;
-
+  --color-theme-button-hover: rgba(255 0 112 / 0.4);
   --color-bg: #00042b;
 
+  /* Шрифты и текст */
   --font-family: 'IBM Plex mono', monospace;
   --font-size: 18px;
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -16,20 +17,20 @@
   --font-weight-bold: 700;
   --line-height: 1.3;
 
+  /* Отступы / размеры */
   --spacing-padding: 10px;
 
+  /* Изображения */
   --img-bg-cover: url(../images/cover-image-dark.png);
 }
 
 @media (width >= 768px) {
 
   :root {
+    /* Отступы / размеры */
     --spacing-padding: 20px;
 
+    /* Шрифты и текст */
     --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
-
-@media (width >= 1024px) {
-
 }

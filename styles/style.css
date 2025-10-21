@@ -27,8 +27,8 @@
 }
 
 .title-decor {
-  background-color: var(--color-accent, #ff0070);
   color: var(--color-secondary, #000028);
+  background-color: var(--color-accent, #ff0070);
 }
 
 .title-normal {
@@ -63,27 +63,48 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(3, min-content);
-  row-gap: 60px;
+  grid-template-rows:
+    62px
+    min-content
+    65px
+    min-content
+    55px
+    min-content;
+  grid-template-areas:
+    '.'
+    'theme-menu'
+    '.'
+    'title'
+    '.'
+    'subtitle';
   height: 100vh;
   min-height: 668px;
   padding: var(--spacing-padding);
 }
 
 .header__theme-menu {
+  grid-area: theme-menu;
   justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
   border: 1px solid transparent;
-  background-color: transparent;
+  padding: 0 12px;
   color: var(--color-theme-button, #ff0070);
+  line-height: 1.39;
   text-transform: lowercase;
-  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  border-color: rgba(var(--color-theme-button) / .4);
+  border-color: var(--color-theme-button-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -93,26 +114,31 @@
 .header__theme-menu-button:focus-visible {
   border-top-color: transparent;
   border-right-color: transparent;
-  border-left-color: transparent;
   border-bottom-color: currentColor;
+  border-left-color: transparent;
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   border: 1px solid currentColor;
+  pointer-events: none;
 }
 
 .header__title {
+  grid-area: title;
   color: var(--color-accent-alt, #db00ff);
   font-size: var(--font-size-title);
-  line-height: .83;
+  line-height: 0.83;
   text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
+}
+
+.header__subtitle {
+  grid-area: subtitle;
 }
 
 .header__rec {
   position: absolute;
   top: var(--spacing-padding);
-  right: 38px;
+  right: calc(var(--spacing-padding) + 9px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,34 +158,45 @@
 
   .header {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows:
+      169px
+      min-content
+      173px
+      min-content
+      162px
+      min-content;
     grid-template-areas:
+      '.          .'
       'theme-menu theme-menu'
-      'title title'
-      '.     subtitle';
-    row-gap: 170px;
-  }
-
-  .header__theme-menu {
-    grid-area: theme-menu;
+      '.          .'
+      'title      title'
+      '.          .'
+      '.          subtitle';
   }
 
   .header__title {
-    grid-area: title;
-  }
-
-  .header__subtitle {
-    grid-area: subtitle;
+    transform: translate(-20px);
   }
 }
 
 @media (width >= 1024px) {
+
+  .header {
+    grid-template-rows:
+      0
+      min-content
+      273px
+      min-content
+      114px
+      min-content;
+  }
 
   .header__theme-menu {
     justify-self: center;
   }
 
   .header__theme-menu-list {
-    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -196,6 +233,13 @@
   gap: 50px;
 }
 
+@media (width >= 768px) {
+
+  .main {
+    gap: 80px;
+  }
+}
+
 /* Cекция */
 
 .section {
@@ -221,8 +265,8 @@
   .distractions {
     grid-template-rows: min-content 1fr;
     grid-template-areas:
-      "title ."
-      "card-list card-list";
+      'title .'
+      'card-list card-list';
   }
 
   .distractions__title {
@@ -236,8 +280,8 @@
   .tips {
     grid-template-rows: min-content 1fr;
     grid-template-areas:
-      "title subtitle"
-      "title card-list";
+      'title subtitle'
+      'title card-list';
   }
 
   .tips__title {
@@ -255,8 +299,33 @@
 
 @media (width >= 1024px) {
 
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'title card-list card-list';
+  }
+
+  .section__title {
+    grid-area: title;
+  }
+
+  .section__card-list {
+    grid-area: card-list;
+  }
+
+  .distractions {
+    grid-template-areas:
+      'title     .         .'
+      'card-list card-list card-list';
+  }
+
   .distractions__card-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tips {
+    grid-template-areas:
+      'title subtitle subtitle'
+      'title card-list card-list';
   }
 }
 
@@ -274,15 +343,19 @@
 
 /* Галерея */
 
+.gallery {
+  gap: 10px;
+}
+
 @media (width >= 768px) {
 
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "title  title  title"
-      "sunset sunset ice-cream"
-      "tape   books  ice-cream"
-      "tape   street street";
+      'title  title  title'
+      'sunset sunset ice-cream'
+      'tape   books  ice-cream'
+      'tape   street street';
     gap: 20px;
   }
 
@@ -323,11 +396,11 @@
 
 .footer__title {
   color: var(--color-accent-alt, #db00ff);
+  font-weight: var(--font-weight-bold, 700);
   font-size: var(
     --font-size-title,
     clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
   );
-  font-weight: var(--font-weight-bold, 700);
-  line-height: .83;
+  line-height: 0.83;
   text-shadow: 2px 2px 0 var(--color-accent, #ff0070);
 }
