@@ -157,7 +157,7 @@
 @media (width >= 768px) {
 
   .header {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows:
       169px
       min-content
@@ -243,8 +243,6 @@
 /* Cекция */
 
 .section {
-  display: grid;
-  gap: 20px;
   padding: 0 var(--spacing-padding);
 }
 
@@ -256,78 +254,6 @@
   font-size: var(--font-size, 18px);
 }
 
-@media (width >= 768px) {
-
-  .section {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .distractions {
-    grid-template-rows: min-content 1fr;
-    grid-template-areas:
-      'title .'
-      'card-list card-list';
-  }
-
-  .distractions__title {
-    grid-area: title;
-  }
-
-  .distractions__card-list {
-    grid-area: card-list;
-  }
-
-  .tips {
-    grid-template-rows: min-content 1fr;
-    grid-template-areas:
-      'title subtitle'
-      'title card-list';
-  }
-
-  .tips__title {
-    grid-area: title;
-  }
-
-  .tips__subtitle {
-    grid-area: subtitle;
-  }
-
-  .tips__card-list {
-    grid-area: card-list;
-  }
-}
-
-@media (width >= 1024px) {
-
-  .section {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'title card-list card-list';
-  }
-
-  .section__title {
-    grid-area: title;
-  }
-
-  .section__card-list {
-    grid-area: card-list;
-  }
-
-  .distractions {
-    grid-template-areas:
-      'title     .         .'
-      'card-list card-list card-list';
-  }
-
-  .distractions__card-list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .tips {
-    grid-template-areas:
-      'title subtitle subtitle'
-      'title card-list card-list';
-  }
-}
 
 /* Карточка */
 
@@ -341,46 +267,174 @@
   gap: 10px;
 }
 
-/* Галерея */
+/* Reasons */
+
+.reasons {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'title'
+    'card-list';
+}
+
+.reasons__title {
+  grid-area: title;
+}
+
+.reasons__card-list {
+  grid-area: card-list;
+}
+
+@media (width >= 768px) {
+
+  .reasons {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      'title card-list';
+  }
+}
+
+@media (width >= 1024px) {
+
+  .reasons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'title card-list card-list';
+  }
+}
+
+/* Distractions */
+
+.distractions {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'title'
+    'card-list';
+}
+
+.distractions__title {
+  grid-area: title;
+}
+
+.distractions__card-list {
+  grid-area: card-list;
+}
+
+@media (width >= 768px) {
+
+  .distractions {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      'title     .'
+      'card-list card-list';
+  }
+}
+
+@media (width >= 1024px) {
+
+  .distractions {
+    grid-template-areas:
+      'title     . .'
+      'card-list card-list card-list';
+  }
+
+  .distractions__card-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tips */
+
+.tips {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'title'
+    'subtitle'
+    'card-list';
+}
+
+.tips__title {
+  grid-area: title;
+}
+
+.tips__subtitle {
+  grid-area: subtitle;
+}
+
+.tips__card-list {
+  grid-area: card-list;
+}
+
+@media (width >= 768px) {
+
+  .tips {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      'title subtitle'
+      'title card-list';
+  }
+}
+
+@media (width >= 1024px) {
+
+  .tips {
+    grid-template-areas:
+      'title subtitle  subtitle'
+      'title card-list card-list';
+  }
+}
+
+/* Gallery */
 
 .gallery {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'sunset'
+    'ice-cream'
+    'tape'
+    'books'
+    'street';
   gap: 10px;
+}
+
+.gallery__title {
+  grid-area: title;
+}
+
+.gallery__image--sunset {
+  grid-area: sunset;
+}
+
+.gallery__image--ice-cream {
+  grid-area: ice-cream;
+}
+
+.gallery__image--tape {
+  grid-area: tape;
+}
+
+.gallery__image--books {
+  grid-area: books;
+}
+
+.gallery__image--street {
+  grid-area: street;
 }
 
 @media (width >= 768px) {
 
   .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'title  title  title'
       'sunset sunset ice-cream'
       'tape   books  ice-cream'
       'tape   street street';
     gap: 20px;
-  }
-
-  .gallery__title {
-    grid-area: title;
-  }
-
-  .gallery__image--sunset {
-    grid-area: sunset;
-  }
-
-  .gallery__image--ice-cream {
-    grid-area: ice-cream;
-  }
-
-  .gallery__image--tape {
-    grid-area: tape;
-  }
-
-  .gallery__image--books {
-    grid-area: books;
-  }
-
-  .gallery__image--street {
-    grid-area: street;
   }
 }
 
