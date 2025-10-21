@@ -1,16 +1,40 @@
 :root.theme-light {
-  --color-accent: #ff8dcb;
-  --color-accent-alt: #ffc2e6;
+  /* Цвета */
   --color-primary: #353430;
   --color-secondary: #353430;
+  --color-accent: #ff8dcb;
+  --color-accent-alt: #ffc2e6;
   --color-section-title: #353430;
   --color-theme-button: #353430;
-
+  --color-theme-button-hover: rgba(50 49 45 / 0.4);
   --color-bg: #ffeef6;
 
+  /* Изображения */
   --img-bg-cover: url(../images/cover-image-light.png);
+}
 
-  .header__rec {
+.theme-light .header__rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    /* Цвета */
+    --color-primary: #353430;
+    --color-secondary: #353430;
+    --color-accent: #ff8dcb;
+    --color-accent-alt: #ffc2e6;
+    --color-section-title: #353430;
+    --color-theme-button: #353430;
+    --color-theme-button-hover: rgba(50 49 45 / 0.4);
+    --color-bg: #ffeef6;
+
+    /* Изображения */
+    --img-bg-cover: url(../images/cover-image-light.png);
+  }
+
+  .theme-auto .header__rec {
     display: none;
   }
 }
