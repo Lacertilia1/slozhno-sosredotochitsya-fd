@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="icon" href="images/favicon.ico" sizes="any" />
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="images/mobile-icon.png" />
+    <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon/mobile-icon.png" />
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
@@ -53,15 +53,14 @@
           надо
         </p>
       </div>
-      <span class="header__rec" aria-hidden="true">
-        REC
-        <span class="header__dot"></span>
-      </span>
+      <span class="header__rec" aria-hidden="true">REC</span>
     </header>
 
     <main class="main">
       <section class="section reasons">
-        <h2 class="section__title reasons__title title">Почему сосредоточиться так сложно</h2>
+        <h2 class="section__title reasons__title title">
+          Почему сосредоточиться так сложно
+        </h2>
         <ul class="reasons__card-list card-list">
           <li>
             <article class="card">
@@ -246,32 +245,37 @@
         <h2 class="gallery__title title title-decor">А можно в картинках?</h2>
         <img
           class="gallery__image gallery__image--sunset"
-          src="images/sunset.png"
-          alt="горы на закате"
+          src="./images/jpg/sunset@x1.jpg"
+          srcset="
+            ./images/jpg/sunset@x1.jpg 1x,
+            ./images/jpg/sunset@x2.jpg 2x,
+            ./images/jpg/sunset@x3.jpg 3x
+          "
+          alt="Горы на закате"
           loading="lazy"
         />
         <img
           class="gallery__image gallery__image--ice-cream"
-          src="images/ice-cream.png"
-          alt="мороженое в кружке"
+          src="./images/png/ice-cream@x1.png"
+          alt="Мороженое в кружке"
           loading="lazy"
         />
         <img
           class="gallery__image gallery__image--tape"
-          src="images/tape.png"
-          alt="кассета с музыкой"
+          src="./images/png/tape@x1.png"
+          alt="Кассета с музыкой"
           loading="lazy"
         />
         <img
           class="gallery__image gallery__image--books"
-          src="images/books.png"
-          alt="книги с чашкой кофе наверху"
+          src="./images/png/books@x1.png"
+          alt="Книги с чашкой кофе наверху"
           loading="lazy"
         />
         <img
           class="gallery__image gallery__image--street"
-          src="images/street.png"
-          alt="улица в розовых тонах"
+          src="./images/png/street@x1.png"
+          alt="Улица в розовых тонах"
           loading="lazy"
         />
       </section>
