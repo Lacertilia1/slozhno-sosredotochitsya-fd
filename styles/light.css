@@ -13,8 +13,65 @@
   --img-bg-cover: url(../images/cover-image-light.png);
 }
 
+/* REC */
+
 .theme-light .header__rec {
   display: none;
+}
+
+/* Page */
+
+.theme-light .page {
+  display: grid;
+  gap: 40px;
+  background-color: var(--color-bg, #00042b);
+  background-image:
+    -webkit-image-set(
+      url(../images/avif/cover-image-light@x1.avif) type('image/avif'),
+      url(../images/webp/cover-image-light@x1.webp) type('image/webp'),
+      url(../images/png/cover-image-light@x1.png) type('image/png'),
+      url(../images/jpg/cover-image-light@x1.jpg) type('image/jpeg')
+    );
+  background-image:
+    image-set(
+      url(../images/avif/cover-image-light@x1.avif) type('image/avif'),
+      url(../images/webp/cover-image-light@x1.webp) type('image/webp'),
+      url(../images/png/cover-image-light@x1.png) type('image/png'),
+      url(../images/jpg/cover-image-light@x1.jpg) type('image/jpeg')
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (width >= 768px) {
+
+  .theme-light .page {
+    gap: 60px;
+    background-image:
+      -webkit-image-set(
+        url(../images/avif/cover-image-light@x3.avif) type('image/avif') 3x,
+        url(../images/avif/cover-image-light@x2.avif) type('image/avif') 2x,
+        url(../images/webp/cover-image-light@x3.webp) type('image/webp') 3x,
+        url(../images/webp/cover-image-light@x2.webp) type('image/webp') 2x,
+        url(../images/png/cover-image-light@x3.png) type('image/png') 3x,
+        url(../images/png/cover-image-light@x2.png) type('image/png') 2x,
+        url(../images/jpg/cover-image-light@x3.jpg) type('image/jpeg') 3x,
+        url(../images/jpg/cover-image-light@x2.jpg) type('image/jpeg') 2x
+      );
+    background-image:
+      image-set(
+        url(../images/avif/cover-image-light@x3.avif) type('image/avif') 3x,
+        url(../images/avif/cover-image-light@x2.avif) type('image/avif') 2x,
+        url(../images/webp/cover-image-light@x3.webp) type('image/webp') 3x,
+        url(../images/webp/cover-image-light@x2.webp) type('image/webp') 2x,
+        url(../images/png/cover-image-light@x3.png) type('image/png') 3x,
+        url(../images/png/cover-image-light@x2.png) type('image/png') 2x,
+        url(../images/jpg/cover-image-light@x3.jpg) type('image/jpeg') 3x,
+        url(../images/jpg/cover-image-light@x2.jpg) type('image/jpeg') 2x
+      );
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,7 +91,65 @@
     --img-bg-cover: url(../images/cover-image-light.png);
   }
 
+  /* REC */
+
   .theme-auto .header__rec {
     display: none;
+  }
+
+  /* Page */
+
+  .theme-auto .page {
+    display: grid;
+    gap: 40px;
+    background-color: var(--color-bg, #00042b);
+    background-image: var(--img-bg-cover, url(../images/png/cover-image-light@x2.png));
+    background-image:
+      -webkit-image-set(
+        url(../images/avif/cover-image-light@x1.avif) type('image/avif'),
+        url(../images/webp/cover-image-light@x1.webp) type('image/webp'),
+        url(../images/png/cover-image-light@x1.png) type('image/png'),
+        url(../images/jpg/cover-image-light@x1.jpg) type('image/jpeg')
+      );
+    background-image:
+      image-set(
+        url(../images/avif/cover-image-light@x1.avif) type('image/avif'),
+        url(../images/webp/cover-image-light@x1.webp) type('image/webp'),
+        url(../images/png/cover-image-light@x1.png) type('image/png'),
+        url(../images/jpg/cover-image-light@x1.jpg) type('image/jpeg')
+      );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  @media (width >= 768px) {
+
+    .theme-auto .page {
+      gap: 60px;
+      background-image:
+        -webkit-image-set(
+          url(../images/avif/cover-image-light@x3.avif) type('image/avif') 3x,
+          url(../images/avif/cover-image-light@x2.avif) type('image/avif') 2x,
+          url(../images/webp/cover-image-light@x3.webp) type('image/webp') 3x,
+          url(../images/webp/cover-image-light@x2.webp) type('image/webp') 2x,
+          url(../images/png/cover-image-light@x3.png) type('image/png') 3x,
+          url(../images/png/cover-image-light@x2.png) type('image/png') 2x,
+          url(../images/jpg/cover-image-light@x3.jpg) type('image/jpeg') 3x,
+          url(../images/jpg/cover-image-light@x2.jpg) type('image/jpeg') 2x
+        );
+      background-image:
+        image-set(
+          url(../images/avif/cover-image-light@x3.avif) type('image/avif') 3x,
+          url(../images/avif/cover-image-light@x2.avif) type('image/avif') 2x,
+          url(../images/webp/cover-image-light@x3.webp) type('image/webp') 3x,
+          url(../images/webp/cover-image-light@x2.webp) type('image/webp') 2x,
+          url(../images/png/cover-image-light@x3.png) type('image/png') 3x,
+          url(../images/png/cover-image-light@x2.png) type('image/png') 2x,
+          url(../images/jpg/cover-image-light@x3.jpg) type('image/jpeg') 3x,
+          url(../images/jpg/cover-image-light@x2.jpg) type('image/jpeg') 2x
+        );
+    }
   }
 }
