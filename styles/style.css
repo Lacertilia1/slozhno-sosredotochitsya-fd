@@ -70,21 +70,7 @@
   display: grid;
   gap: 40px;
   background-color: var(--color-bg, #00042b);
-  background-image: var(--img-bg-cover, url(../images/png/cover-image-dark@x2.png));
-  background-image:
-    -webkit-image-set(
-      url(../images/avif/cover-image-dark@x1.avif) type('image/avif'),
-      url(../images/webp/cover-image-dark@x1.webp) type('image/webp'),
-      url(../images/png/cover-image-dark@x1.png) type('image/png'),
-      url(../images/jpg/cover-image-dark@x1.jpg) type('image/jpeg')
-    );
-  background-image:
-    image-set(
-      url(../images/avif/cover-image-dark@x1.avif) type('image/avif'),
-      url(../images/webp/cover-image-dark@x1.webp) type('image/webp'),
-      url(../images/png/cover-image-dark@x1.png) type('image/png'),
-      url(../images/jpg/cover-image-dark@x1.jpg) type('image/jpeg')
-    );
+  background-image: var(--img-bg-cover, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -95,28 +81,6 @@
 
   .page {
     gap: 60px;
-    background-image:
-      -webkit-image-set(
-        url(../images/avif/cover-image-dark@x3.avif) type('image/avif') 3x,
-        url(../images/avif/cover-image-dark@x2.avif) type('image/avif') 2x,
-        url(../images/webp/cover-image-dark@x3.webp) type('image/webp') 3x,
-        url(../images/webp/cover-image-dark@x2.webp) type('image/webp') 2x,
-        url(../images/png/cover-image-dark@x3.png) type('image/png') 3x,
-        url(../images/png/cover-image-dark@x2.png) type('image/png') 2x,
-        url(../images/jpg/cover-image-dark@x3.jpg) type('image/jpeg') 3x,
-        url(../images/jpg/cover-image-dark@x2.jpg) type('image/jpeg') 2x
-      );
-    background-image:
-      image-set(
-        url(../images/avif/cover-image-dark@x3.avif) type('image/avif') 3x,
-        url(../images/avif/cover-image-dark@x2.avif) type('image/avif') 2x,
-        url(../images/webp/cover-image-dark@x3.webp) type('image/webp') 3x,
-        url(../images/webp/cover-image-dark@x2.webp) type('image/webp') 2x,
-        url(../images/png/cover-image-dark@x3.png) type('image/png') 3x,
-        url(../images/png/cover-image-dark@x2.png) type('image/png') 2x,
-        url(../images/jpg/cover-image-dark@x3.jpg) type('image/jpeg') 3x,
-        url(../images/jpg/cover-image-dark@x2.jpg) type('image/jpeg') 2x
-      );
   }
 }
 
