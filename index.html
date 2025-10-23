@@ -243,41 +243,345 @@
 
       <section class="section gallery">
         <h2 class="gallery__title title title-decor">А можно в картинках?</h2>
-        <img
-          class="gallery__image gallery__image--sunset"
-          src="./images/jpg/sunset@x1.jpg"
-          srcset="
-            ./images/jpg/sunset@x1.jpg 1x,
-            ./images/jpg/sunset@x2.jpg 2x,
-            ./images/jpg/sunset@x3.jpg 3x
-          "
-          alt="Горы на закате"
-          loading="lazy"
-        />
-        <img
-          class="gallery__image gallery__image--ice-cream"
-          src="./images/png/ice-cream@x1.png"
-          alt="Мороженое в кружке"
-          loading="lazy"
-        />
-        <img
-          class="gallery__image gallery__image--tape"
-          src="./images/png/tape@x1.png"
-          alt="Кассета с музыкой"
-          loading="lazy"
-        />
-        <img
-          class="gallery__image gallery__image--books"
-          src="./images/png/books@x1.png"
-          alt="Книги с чашкой кофе наверху"
-          loading="lazy"
-        />
-        <img
-          class="gallery__image gallery__image--street"
-          src="./images/png/street@x1.png"
-          alt="Улица в розовых тонах"
-          loading="lazy"
-        />
+
+        <!-- Sunset -->
+        <picture class="gallery__picture gallery__picture--sunset">
+          <!-- AVIF для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/avif/sunset@x2.avif 1x,
+              ./images/avif/sunset@x3.avif 2x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/webp/sunset@x2.webp 1x,
+              ./images/webp/sunset@x3.webp 2x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/png/sunset@x2.png 1x,
+              ./images/png/sunset@x3.png 2x
+            "
+            type="image/png"
+          />
+          <!-- AVIF для всех -->
+          <source
+            srcset="
+              ./images/avif/sunset@x1.avif 1x,
+              ./images/avif/sunset@x2.avif 2x,
+              ./images/avif/sunset@x3.avif 3x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для всех -->
+          <source
+            srcset="
+              ./images/webp/sunset@x1.webp 1x,
+              ./images/webp/sunset@x2.webp 2x,
+              ./images/webp/sunset@x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для всех -->
+          <source
+            srcset="
+              ./images/png/sunset@x1.png 1x,
+              ./images/png/sunset@x2.png 2x,
+              ./images/png/sunset@x3.png 3x
+            "
+            type="image/png"
+          />
+          <!-- Фолбек для всех браузеров -->
+          <img
+            src="./images/jpg/sunset@x1.jpg"
+            srcset="
+              ./images/jpg/sunset@x1.jpg 1x,
+              ./images/jpg/sunset@x2.jpg 2x,
+              ./images/jpg/sunset@x3.jpg 3x
+            "
+            alt="Спокойные горы на закате, символ расслабления и медитации"
+            loading="lazy"
+          />
+        </picture>
+
+        <!-- Ice Cream -->
+        <picture class="gallery__picture gallery__picture--ice-cream">
+          <!-- AVIF для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/avif/ice-cream@x2.avif 1x,
+              ./images/avif/ice-cream@x3.avif 2x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/webp/ice-cream@x2.webp 1x,
+              ./images/webp/ice-cream@x3.webp 2x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/png/ice-cream@x2.png 1x,
+              ./images/png/ice-cream@x3.png 2x
+            "
+            type="image/png"
+          />
+          <!-- AVIF для всех -->
+          <source
+            srcset="
+              ./images/avif/ice-cream@x1.avif 1x,
+              ./images/avif/ice-cream@x2.avif 2x,
+              ./images/avif/ice-cream@x3.avif 3x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для всех -->
+          <source
+            srcset="
+              ./images/webp/ice-cream@x1.webp 1x,
+              ./images/webp/ice-cream@x2.webp 2x,
+              ./images/webp/ice-cream@x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для всех -->
+          <source
+            srcset="
+              ./images/png/ice-cream@x1.png 1x,
+              ./images/png/ice-cream@x2.png 2x,
+              ./images/png/ice-cream@x3.png 3x
+            "
+            type="image/png"
+          />
+          <!-- Фолбек -->
+          <img
+            src="./images/jpg/ice-cream@x1.jpg"
+            srcset="
+              ./images/jpg/ice-cream@x1.jpg 1x,
+              ./images/jpg/ice-cream@x2.jpg 2x,
+              ./images/jpg/ice-cream@x3.jpg 3x
+            "
+            alt="Мороженое в кружке, символ маленькой радости и расслабления"
+            loading="lazy"
+          />
+        </picture>
+
+        <!-- Tape -->
+        <picture class="gallery__picture gallery__picture--tape">
+          <!-- AVIF для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/avif/tape@x2.avif 1x,
+              ./images/avif/tape@x3.avif 2x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/webp/tape@x2.webp 1x,
+              ./images/webp/tape@x3.webp 2x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/png/tape@x2.png 1x, ./images/png/tape@x3.png 2x"
+            type="image/png"
+          />
+          <!-- AVIF для всех -->
+          <source
+            srcset="
+              ./images/avif/tape@x1.avif 1x,
+              ./images/avif/tape@x2.avif 2x,
+              ./images/avif/tape@x3.avif 3x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для всех -->
+          <source
+            srcset="
+              ./images/webp/tape@x1.webp 1x,
+              ./images/webp/tape@x2.webp 2x,
+              ./images/webp/tape@x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для всех -->
+          <source
+            srcset="
+              ./images/png/tape@x1.png 1x,
+              ./images/png/tape@x2.png 2x,
+              ./images/png/tape@x3.png 3x
+            "
+            type="image/png"
+          />
+          <!-- Фолбек -->
+          <img
+            src="./images/jpg/tape@x1.jpg"
+            srcset="
+              ./images/jpg/tape@x1.jpg 1x,
+              ./images/jpg/tape@x2.jpg 2x,
+              ./images/jpg/tape@x3.jpg 3x
+            "
+            alt="Кассета с музыкой, визуализация приятного фона для сосредоточенности"
+            loading="lazy"
+          />
+        </picture>
+
+        <!-- Books -->
+        <picture class="gallery__picture gallery__picture--books">
+          <!-- AVIF для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/avif/books@x2.avif 1x,
+              ./images/avif/books@x3.avif 2x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/webp/books@x2.webp 1x,
+              ./images/webp/books@x3.webp 2x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/png/books@x2.png 1x, ./images/png/books@x3.png 2x"
+            type="image/png"
+          />
+          <!-- AVIF для всех -->
+          <source
+            srcset="
+              ./images/avif/books@x1.avif 1x,
+              ./images/avif/books@x2.avif 2x,
+              ./images/avif/books@x3.avif 3x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для всех -->
+          <source
+            srcset="
+              ./images/webp/books@x1.webp 1x,
+              ./images/webp/books@x2.webp 2x,
+              ./images/webp/books@x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для всех -->
+          <source
+            srcset="
+              ./images/png/books@x1.png 1x,
+              ./images/png/books@x2.png 2x,
+              ./images/png/books@x3.png 3x
+            "
+            type="image/png"
+          />
+          <!-- Фолбек -->
+          <img
+            src="./images/jpg/books@x1.jpg"
+            srcset="
+              ./images/jpg/books@x1.jpg 1x,
+              ./images/jpg/books@x2.jpg 2x,
+              ./images/jpg/books@x3.jpg 3x
+            "
+            alt="Книги с чашкой кофе, символ сосредоточенной учебы или чтения"
+            loading="lazy"
+          />
+        </picture>
+
+        <!-- Street -->
+        <picture class="gallery__picture gallery__picture--street">
+          <!-- AVIF для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/avif/street@x2.avif 1x,
+              ./images/avif/street@x3.avif 2x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/webp/street@x2.webp 1x,
+              ./images/webp/street@x3.webp 2x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для планшета и десктопа -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/png/street@x2.png 1x,
+              ./images/png/street@x3.png 2x
+            "
+            type="image/png"
+          />
+          <!-- AVIF для всех -->
+          <source
+            srcset="
+              ./images/avif/street@x1.avif 1x,
+              ./images/avif/street@x2.avif 2x,
+              ./images/avif/street@x3.avif 3x
+            "
+            type="image/avif"
+          />
+          <!-- WebP для всех -->
+          <source
+            srcset="
+              ./images/webp/street@x1.webp 1x,
+              ./images/webp/street@x2.webp 2x,
+              ./images/webp/street@x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <!-- PNG для всех -->
+          <source
+            srcset="
+              ./images/png/street@x1.png 1x,
+              ./images/png/street@x2.png 2x,
+              ./images/png/street@x3.png 3x
+            "
+            type="image/png"
+          />
+          <!-- Фолбек -->
+          <img
+            src="./images/jpg/street@x1.jpg"
+            srcset="
+              ./images/jpg/street@x1.jpg 1x,
+              ./images/jpg/street@x2.jpg 2x,
+              ./images/jpg/street@x3.jpg 3x
+            "
+            alt="Тихая улица в розовых тонах, образ расслабления и спокойствия для концентрации"
+            loading="lazy"
+          />
+        </picture>
       </section>
     </main>
 
