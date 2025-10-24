@@ -79,6 +79,10 @@
   font-size: inherit;
 }
 
+.card__title--normal {
+  font-weight: var(--font-weight-regular, 400);
+}
+
 @media (width >= 1024px) {
 
   .card-list--3cols {
@@ -101,10 +105,6 @@
 .title-decor {
   color: var(--color-secondary, #000028);
   background-color: var(--color-accent, #ff0070);
-}
-
-.title-normal {
-  font-weight: var(--font-weight-regular, 400);
 }
 
 /* Subtitle */
