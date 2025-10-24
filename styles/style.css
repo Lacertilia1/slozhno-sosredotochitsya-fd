@@ -89,7 +89,7 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 35% 1fr 35%;
+  grid-template-rows: 1fr min-content 1fr;
   grid-template-areas:
     'theme-menu'
     'title'
@@ -183,7 +183,6 @@
 
   .header {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 45% 1fr 45%;
     grid-template-areas:
       'theme-menu theme-menu'
       'title      title'
@@ -196,10 +195,6 @@
 }
 
 @media (width >= 1024px) {
-
-  .header {
-    grid-template-rows: 40% 1fr 40%;
-  }
 
   .header__theme-menu {
     justify-self: center;
