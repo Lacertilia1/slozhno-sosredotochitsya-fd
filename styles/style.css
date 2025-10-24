@@ -40,28 +40,28 @@
 
 /* Decorated zone */
 
-.decorated-zone::before {
+.decorated-zone::before,
+.decorated-zone::after {
   content: '';
   position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
   border-inline-start: 1px solid var(--color-accent, #ff0070);
   border-inline-end: 1px solid transparent;
   border-block-start: 1px solid transparent;
   border-block-end: 1px solid var(--color-accent, #ff0070);
   inset-block-end: var(--spacing-padding, 10px);
   inset-inline-start: var(--spacing-padding, 10px);
-  inline-size: 25px;
-  block-size: 25px;
 }
 
 .decorated-zone::after {
-  content: '';
-  position: absolute;
   border-inline-end: 1px solid var(--color-accent, #ff0070);
   border-block-start: 1px solid var(--color-accent, #ff0070);
   inset-block-start: var(--spacing-padding, 10px);
   inset-inline-end: var(--spacing-padding, 10px);
-  inline-size: 25px;
-  block-size: 25px;
 }
 
 /* Page */
