@@ -1,7 +1,45 @@
+/* Section */
+
+.section {
+  padding: 0 var(--spacing-padding, 10px);
+}
+
+.section__title {
+  color: var(--color-section-title, #ff0070);
+  font-size: inherit;
+}
+
+.section__subtitle {
+  font-size: inherit;
+}
+
+/* Card */
+
+.card-list {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+.card__title {
+  font-weight: var(--font-weight-regular, 400);
+  font-size: inherit;
+}
+
 /* Title */
 
 .title {
-  font-size: var(--font-size, 18px);
+  color: var(--color-accent-alt, #db00ff);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(
+    --font-size-title,
+    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
+  );
+  line-height: 0.83;
 }
 
 .title-decor {
@@ -39,6 +77,15 @@
 }
 
 /* Decorated zone */
+
+.decorated-zone {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-padding, 10px);
+  block-size: 100vh;
+  min-block-size: 668px;
+}
 
 .decorated-zone::before,
 .decorated-zone::after {
@@ -83,17 +130,11 @@
 /* Header  */
 
 .header {
-  position: relative;
-  display: grid;
   grid-template-rows: 1fr min-content 1fr;
   grid-template-areas:
     'theme-menu'
     'title'
     'subtitle';
-  align-items: center;
-  padding: var(--spacing-padding, 10px);
-  block-size: 100vh;
-  min-block-size: 668px;
 }
 
 .header__theme-menu {
@@ -142,12 +183,7 @@
 
 .header__title {
   grid-area: title;
-  color: var(--color-accent-alt, #db00ff);
-  font-size: var(
-    --font-size-title,
-    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
-  );
-  line-height: 0.83;
+  justify-self: start;
   text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
 }
 
@@ -214,32 +250,6 @@
   .main {
     gap: 80px;
   }
-}
-
-/* Section */
-
-.section {
-  padding: 0 var(--spacing-padding, 10px);
-}
-
-.section__title {
-  color: var(--color-section-title, #ff0070);
-}
-
-.section__subtitle {
-  font-size: var(--font-size, 18px);
-}
-
-/* Card */
-
-.card-list {
-  display: grid;
-  gap: 20px;
-}
-
-.card {
-  display: grid;
-  gap: 10px;
 }
 
 /* Reasons */
@@ -417,21 +427,6 @@
 
 /* Footer */
 
-.footer {
-  position: relative;
-  display: grid;
-  place-items: center;
-  block-size: 100vh;
-  min-block-size: 668px;
-}
-
 .footer__title {
-  color: var(--color-accent-alt, #db00ff);
-  font-weight: var(--font-weight-bold, 700);
-  font-size: var(
-    --font-size-title,
-    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
-  );
-  line-height: 0.83;
   text-shadow: 2px 2px 0 var(--color-accent, #ff0070);
 }
