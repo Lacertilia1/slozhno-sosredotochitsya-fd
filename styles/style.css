@@ -1,6 +1,8 @@
 /* Section */
 
 .section {
+  display: grid;
+  gap: 20px;
   padding: 0 var(--spacing-padding, 10px);
 }
 
@@ -9,8 +11,56 @@
   font-size: inherit;
 }
 
-.section__subtitle {
-  font-size: inherit;
+@media (width >= 768px) {
+
+  .section {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'title card-list';
+  }
+
+  .section:has(.section__subtitle) {
+    grid-template-areas:
+      'title subtitle'
+      'title card-list';
+  }
+
+  .section--stacked {
+    grid-template-areas:
+      'title     .'
+      'card-list card-list';
+  }
+
+  .section__title {
+    grid-area: title;
+  }
+
+  .section__subtitle {
+    grid-area: subtitle;
+  }
+
+  .section__card-list {
+    grid-area: card-list;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'title card-list card-list';
+  }
+
+  .section:has(.section__subtitle) {
+    grid-template-areas:
+      'title subtitle  subtitle'
+      'title card-list card-list';
+  }
+
+  .section--stacked {
+    grid-template-areas:
+      'title     .         .'
+      'card-list card-list card-list';
+  }
 }
 
 /* Card */
@@ -26,8 +76,14 @@
 }
 
 .card__title {
-  font-weight: var(--font-weight-regular, 400);
   font-size: inherit;
+}
+
+@media (width >= 1024px) {
+
+  .card-list--3cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Title */
@@ -55,6 +111,7 @@
 
 .subtitle {
   font-weight: var(--font-weight-bold, 700);
+  font-size: inherit;
 }
 
 /* Link */
@@ -131,14 +188,9 @@
 
 .header {
   grid-template-rows: 1fr min-content 1fr;
-  grid-template-areas:
-    'theme-menu'
-    'title'
-    'subtitle';
 }
 
 .header__theme-menu {
-  grid-area: theme-menu;
   justify-self: end;
 }
 
@@ -153,7 +205,6 @@
   border: none;
   padding: 0 12px;
   color: var(--color-theme-button, #ff0070);
-  line-height: 1.39;
   text-transform: lowercase;
   background-color: transparent;
   cursor: pointer;
@@ -182,13 +233,8 @@
 }
 
 .header__title {
-  grid-area: title;
   justify-self: start;
   text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
-}
-
-.header__subtitle {
-  grid-area: subtitle;
 }
 
 .header__rec {
@@ -221,8 +267,17 @@
       '.          subtitle';
   }
 
+  .header__theme-menu {
+    grid-area: theme-menu;
+  }
+
   .header__title {
-    transform: translate(-20px);
+    grid-area: title;
+    transform: translateX(-20px);
+  }
+
+  .header__subtitle {
+    grid-area: subtitle;
   }
 }
 
@@ -252,164 +307,14 @@
   }
 }
 
-/* Reasons */
-
-.reasons {
-  display: grid;
-  grid-template-areas:
-    'title'
-    'card-list';
-  gap: 20px;
-}
-
-.reasons__title {
-  grid-area: title;
-}
-
-.reasons__card-list {
-  grid-area: card-list;
-}
-
-@media (width >= 768px) {
-
-  .reasons {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'title card-list';
-  }
-}
-
-@media (width >= 1024px) {
-
-  .reasons {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 'title card-list card-list';
-  }
-}
-
-/* Distractions */
-
-.distractions {
-  display: grid;
-  grid-template-areas:
-    'title'
-    'card-list';
-  gap: 20px;
-}
-
-.distractions__title {
-  grid-area: title;
-}
-
-.distractions__card-list {
-  grid-area: card-list;
-}
-
-@media (width >= 768px) {
-
-  .distractions {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      'title     .'
-      'card-list card-list';
-  }
-}
-
-@media (width >= 1024px) {
-
-  .distractions {
-    grid-template-areas:
-      'title     . .'
-      'card-list card-list card-list';
-  }
-
-  .distractions__card-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-}
-
-/* Tips */
-
-.tips {
-  display: grid;
-  grid-template-areas:
-    'title'
-    'subtitle'
-    'card-list';
-  gap: 20px;
-}
-
-.tips__title {
-  grid-area: title;
-}
-
-.tips__subtitle {
-  grid-area: subtitle;
-}
-
-.tips__card-list {
-  grid-area: card-list;
-}
-
-@media (width >= 768px) {
-
-  .tips {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      'title subtitle'
-      'title card-list';
-  }
-}
-
-@media (width >= 1024px) {
-
-  .tips {
-    grid-template-areas:
-      'title subtitle  subtitle'
-      'title card-list card-list';
-  }
-}
-
 /* Gallery */
 
 .gallery {
-  display: grid;
-  grid-template-areas:
-    'title'
-    'sunset'
-    'ice-cream'
-    'tape'
-    'books'
-    'street';
   gap: 10px;
-}
-
-.gallery__title {
-  grid-area: title;
 }
 
 .gallery__picture {
   max-inline-size: 100vw;
-}
-
-.gallery__picture--sunset {
-  grid-area: sunset;
-}
-
-.gallery__picture--ice-cream {
-  grid-area: ice-cream;
-}
-
-.gallery__picture--tape {
-  grid-area: tape;
-}
-
-.gallery__picture--books {
-  grid-area: books;
-}
-
-.gallery__picture--street {
-  grid-area: street;
 }
 
 @media (width >= 768px) {
@@ -422,6 +327,26 @@
       'tape   books  ice-cream'
       'tape   street street';
     gap: 20px;
+  }
+
+  .gallery__picture--sunset {
+    grid-area: sunset;
+  }
+
+  .gallery__picture--ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .gallery__picture--tape {
+    grid-area: tape;
+  }
+
+  .gallery__picture--books {
+    grid-area: books;
+  }
+
+  .gallery__picture--street {
+    grid-area: street;
   }
 }
 
