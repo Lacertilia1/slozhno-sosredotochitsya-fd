@@ -4,16 +4,16 @@
   --color-secondary: #353430;
   --color-accent: #ff8dcb;
   --color-accent-alt: #ffc2e6;
+  --color-decor: #353430;
   --color-section-title: #353430;
   --color-theme-button: #353430;
-  --color-theme-button-hover: rgba(50 49 45 / 0.4);
   --color-bg: #ffeef6;
 
   /* Изображения */
   --img-bg-cover: url(../images/cover-image-light.png);
 }
 
-/* REC */
+/* REC для светлой темы */
 
 .theme-light .header__rec {
   display: none;
@@ -27,16 +27,18 @@
     --color-secondary: #353430;
     --color-accent: #ff8dcb;
     --color-accent-alt: #ffc2e6;
+    --color-decor: #353430;
     --color-section-title: #353430;
     --color-theme-button: #353430;
-    --color-theme-button-hover: rgba(50 49 45 / 0.4);
     --color-bg: #ffeef6;
 
     /* Изображения */
     --img-bg-cover: url(../images/cover-image-light.png);
   }
 
-  .theme-auto .header__rec {
+  /* REC для автоматической светлой темы */
+
+  .header__rec {
     display: none;
   }
 }
