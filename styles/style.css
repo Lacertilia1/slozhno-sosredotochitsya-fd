@@ -85,7 +85,7 @@
 
 @media (width >= 1024px) {
 
-  .card-list--3cols {
+  .section--stacked .card-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
