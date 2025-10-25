@@ -80,7 +80,7 @@
 }
 
 .card__title--normal {
-  font-weight: var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-normal, 400);
 }
 
 @media (width >= 1024px) {
@@ -105,13 +105,6 @@
 .title-decor {
   color: var(--color-secondary, #000028);
   background-color: var(--color-accent, #ff0070);
-}
-
-/* Subtitle */
-
-.subtitle {
-  font-weight: var(--font-weight-bold, 700);
-  font-size: inherit;
 }
 
 /* Link */
@@ -235,6 +228,10 @@
 .header__title {
   justify-self: start;
   text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
+}
+
+.header__subtitle {
+  font-weight: var(--font-weight-bold, 700);
 }
 
 .header__rec {

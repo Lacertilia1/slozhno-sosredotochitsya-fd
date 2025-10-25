@@ -13,7 +13,7 @@
   --font-family: 'IBM Plex mono', 'Fira Code', 'Courier New', monospace;
   --font-size: 18px;
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --font-weight-regular: 400;
+  --font-weight-normal: 400;
   --font-weight-bold: 700;
   --line-height: 1.3;
 
