@@ -11,21 +11,11 @@
   font-size: inherit;
 }
 
-.section__subtitle {
-  font-size: inherit;
-}
-
 @media (width >= 768px) {
 
   .section {
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 'title card-list';
-  }
-
-  .section:has(.section__subtitle) {
-    grid-template-areas:
-      'title subtitle'
-      'title card-list';
   }
 
   .section--stacked {
@@ -38,10 +28,6 @@
     grid-area: title;
   }
 
-  .section__subtitle {
-    grid-area: subtitle;
-  }
-
   .section__card-list {
     grid-area: card-list;
   }
@@ -52,12 +38,6 @@
   .section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'title card-list card-list';
-  }
-
-  .section:has(.section__subtitle) {
-    grid-template-areas:
-      'title subtitle  subtitle'
-      'title card-list card-list';
   }
 
   .section--stacked {
@@ -81,6 +61,10 @@
 
 .card__title {
   font-size: inherit;
+}
+
+.card__title--main {
+  margin-bottom: 10px;
 }
 
 .card__title--normal {
