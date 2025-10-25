@@ -11,6 +11,10 @@
   font-size: inherit;
 }
 
+.section__subtitle {
+  font-size: inherit;
+}
+
 @media (width >= 768px) {
 
   .section {
