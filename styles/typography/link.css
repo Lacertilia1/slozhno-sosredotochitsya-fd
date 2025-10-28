@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--color-accent, #282828);
+}
+
+.link:hover {
+  box-shadow: 0 1px currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}

@@ -1,0 +1,14 @@
+.title {
+  color: var(--color-accent-alt, #db00ff);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(
+    --font-size-title,
+    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
+  );
+  line-height: 0.83;
+}
+
+.title--decor {
+  color: var(--color-secondary, #000028);
+  background-color: var(--color-accent, #ff0070);
+}

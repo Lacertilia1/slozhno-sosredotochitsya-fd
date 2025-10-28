@@ -1,0 +1,6 @@
+@media (width >= 768px) {
+
+  .section__card-list {
+    grid-area: card-list;
+  }
+}

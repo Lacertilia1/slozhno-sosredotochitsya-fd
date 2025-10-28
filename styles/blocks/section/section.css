@@ -1,0 +1,21 @@
+.section {
+  display: grid;
+  gap: 20px;
+  padding: 0 var(--spacing-padding, 10px);
+}
+
+@media (width >= 768px) {
+
+  .section {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'title card-list';
+  }
+}
+
+@media (width >= 1024px) {
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'title card-list card-list';
+  }
+}
