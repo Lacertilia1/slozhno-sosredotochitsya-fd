@@ -1,0 +1,11 @@
+.section__title {
+  color: var(--color-section-title, #ff0070);
+  font-size: inherit;
+}
+
+@media (width >= 768px) {
+
+  .section__title {
+    grid-area: title;
+  }
+}

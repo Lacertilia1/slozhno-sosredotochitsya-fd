@@ -1,0 +1,21 @@
+@media (width >= 768px) {
+
+  .section--stacked {
+    grid-template-areas:
+      'title     .'
+      'card-list card-list';
+  }
+}
+
+@media (width >= 1024px) {
+
+  .section--stacked {
+    grid-template-areas:
+      'title     .         .'
+      'card-list card-list card-list';
+  }
+
+  .section--stacked .card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

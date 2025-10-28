@@ -1,0 +1,35 @@
+.decorated-zone {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-padding, 10px);
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+/* Общие стили уголков */
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: var(--corner-size, 25px);
+  block-size: var(--corner-size, 25px);
+  border: var(--corner-thickness, 1px) solid transparent;
+}
+
+/* Цвет и позиция */
+
+.decorated-zone::before {
+  border-block-end-color: var(--color-decor, #ff0070);
+  border-inline-start-color: var(--color-decor, #ff0070);
+  inset-block-start: var(--spacing-padding, 10px);
+  inset-inline-start: var(--spacing-padding, 10px);
+}
+
+.decorated-zone::after {
+  border-block-start-color: var(--color-decor, #ff0070);
+  border-inline-end-color: var(--color-decor, #ff0070);
+  inset-block-end: var(--spacing-padding, 10px);
+  inset-inline-end: var(--spacing-padding, 10px);
+}

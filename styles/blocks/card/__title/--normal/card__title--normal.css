@@ -1,0 +1,3 @@
+.card__title--normal {
+  font-weight: var(--font-weight-normal, 400);
+}
