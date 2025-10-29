@@ -1,0 +1,4 @@
+.header__theme-menu-button--active {
+  outline: 1px solid currentColor;
+  pointer-events: none;
+}

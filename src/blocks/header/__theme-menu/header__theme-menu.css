@@ -1,0 +1,18 @@
+.header__theme-menu {
+  justify-self: end;
+}
+
+@media (width >= 768px) {
+
+  .header__theme-menu {
+    grid-area: theme-menu;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+}

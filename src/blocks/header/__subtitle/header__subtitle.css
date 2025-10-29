@@ -1,0 +1,10 @@
+.header__subtitle {
+  font-weight: var(--font-weight-bold, 700);
+}
+
+@media (width >= 768px) {
+
+  .header__subtitle {
+    grid-area: subtitle;
+  }
+}

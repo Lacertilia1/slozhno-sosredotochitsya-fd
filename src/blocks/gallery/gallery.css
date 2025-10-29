@@ -1,0 +1,16 @@
+.gallery {
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'title  title  title'
+      'sunset sunset ice-cream'
+      'tape   books  ice-cream'
+      'tape   street street';
+    gap: 20px;
+  }
+}

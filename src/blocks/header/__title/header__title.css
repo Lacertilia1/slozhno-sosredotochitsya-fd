@@ -1,0 +1,13 @@
+.header__title {
+  justify-self: start;
+  text-shadow: 4px 4px 0 var(--color-accent, #ff0070);
+}
+
+
+@media (width >= 768px) {
+
+  .header__title {
+    grid-area: title;
+    transform: translateX(-20px);
+  }
+}

@@ -1,0 +1,19 @@
+.header__rec {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent, #ff0070);
+  inset-block-start: var(--spacing-padding, 10px);
+  inset-inline-end: calc(var(--spacing-padding, 10px) + 9px);
+}
+
+.header__rec::after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px currentColor;
+  background-color: currentColor;
+  inline-size: 9px;
+  block-size: 9px;
+}
