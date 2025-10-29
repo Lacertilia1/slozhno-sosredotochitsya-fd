@@ -33,20 +33,20 @@ function setTheme(theme) {
 
 function setActiveButton(buttonsArray, theme) {
   buttonsArray.forEach((button) => {
-    button.classList.remove('header__theme-menu-button_active');
+    button.classList.remove('header__theme-menu-button--active');
     button.removeAttribute('disabled');
   });
   const target = buttonsArray.find((button) =>
     button.classList.contains(`header__theme-menu-button_type_${theme}`)
   );
   if (target) {
-    target.classList.add('header__theme-menu-button_active');
+    target.classList.add('header__theme-menu-button--active');
     target.setAttribute('disabled', true);
   } else {
     const autoButton = document.querySelector(
       '.header__theme-menu-button_type_auto'
     );
-    autoButton.classList.add('header__theme-menu-button_active');
+    autoButton.classList.add('header__theme-menu-button--active');
     autoButton.setAttribute('disabled', true);
   }
 }

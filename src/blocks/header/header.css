@@ -1,0 +1,14 @@
+.header {
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+@media (width >= 768px) {
+
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'theme-menu theme-menu'
+      'title      title'
+      '.          subtitle';
+  }
+}

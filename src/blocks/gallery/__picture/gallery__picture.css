@@ -1,0 +1,26 @@
+.gallery__picture {
+  max-inline-size: 100vw;
+}
+
+@media (width >= 768px) {
+
+  .gallery__picture--sunset {
+    grid-area: sunset;
+  }
+
+  .gallery__picture--ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .gallery__picture--tape {
+    grid-area: tape;
+  }
+
+  .gallery__picture--books {
+    grid-area: books;
+  }
+
+  .gallery__picture--street {
+    grid-area: street;
+  }
+}

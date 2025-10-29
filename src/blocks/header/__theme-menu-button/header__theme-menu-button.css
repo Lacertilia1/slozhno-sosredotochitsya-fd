@@ -1,0 +1,26 @@
+.header__theme-menu-button {
+  position: relative;
+  border: none;
+  padding: 0 12px;
+  color: var(--color-decor, #ff0070);
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+  opacity: 0.4;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  box-shadow: 0 1px currentColor;
+}
