@@ -2,7 +2,7 @@
   display: grid;
   gap: 40px;
   background-color: var(--color-bg, #00042b);
-  background-image: var(--img-bg-cover, url(../images/cover-image-dark.png));
+  background-image: var(--img-bg-cover, url(./images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

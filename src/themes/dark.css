@@ -10,7 +10,7 @@
   --color-bg: #00042b;
 
   /* Изображения */
-  --img-bg-cover: url(../images/cover-image-dark.png);
+  --img-bg-cover: url(./images/cover-image-dark.png);
 }
 
 /* REC для тёмной темы */

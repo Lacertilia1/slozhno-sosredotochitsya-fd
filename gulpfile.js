@@ -18,45 +18,44 @@ function html() {
   return gulp.src('src/**/*.html')
     .pipe(plumber())
     .pipe(gulp.dest('dist/'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.stream());
 }
 
 // Сборка и объединение CSS
 function css() {
   return gulp.src([
-    'src/variables.css',
-    'src/fonts/**/*.css',
-    'src/themes/**/*.css',
-    'src/typography/**/*.css',
-    'src/utilities/**/*.css',
-    'src/globals.css',
-    'src/blocks/**/*.css'
+    'src/variables.css',          // Переменные
+    'src/fonts/**/*.css',         // Шрифты
+    'src/globals.css',            // Глобальные стили и сбросы
+    'src/typography/**/*.css',    // Типографика
+    'src/utilities/**/*.css',     // Утилиты
+    'src/blocks/**/*.css',        // Блоки
+    'src/themes/dark.css',        // Темная тема
+    'src/themes/light.css'        // Светлая тема
   ])
     .pipe(plumber())
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest('dist/'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.stream());
 }
 
 // Копирование файлов шрифтов
 function fonts() {
   return gulp.src('src/fonts/**/*.{woff,woff2,ttf,otf}')
-    .pipe(gulp.dest('dist/fonts'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(gulp.dest('dist/fonts'));
 }
 
 // Копирование изображений
 function images() {
   return gulp.src('src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}')
-    .pipe(gulp.dest('dist/images'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(gulp.dest('dist/images'));
 }
 
 // Копирование JS
 function js() {
   return gulp.src('src/scripts/**/*.js')
     .pipe(gulp.dest('dist/scripts'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.stream());
 }
 
 // Очистка dist
@@ -66,19 +65,19 @@ function clean() {
 
 // Вотчеры
 function watchFiles() {
-  gulp.watch(['src/**/*.html'], html);
+  gulp.watch('src/**/*.html', html);
   gulp.watch([
     'src/variables.css',
     'src/fonts/**/*.css',
-    'src/themes/**/*.css',
+    'src/globals.css',
     'src/typography/**/*.css',
     'src/utilities/**/*.css',
-    'src/globals.css',
-    'src/blocks/**/*.css'
+    'src/blocks/**/*.css',
+    'src/themes/**/*.css'
   ], css);
-  gulp.watch(['src/fonts/**/*.{woff,woff2,ttf,otf}'], fonts);
-  gulp.watch(['src/scripts/**/*.js'], js);
-  gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
+  gulp.watch('src/fonts/**/*.{woff,woff2,ttf,otf}', fonts).on('change', browserSync.reload);
+  gulp.watch('src/scripts/**/*.js', js);
+  gulp.watch('src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}', images).on('change', browserSync.reload);
 }
 
 // Сборка и запуск
