@@ -10,7 +10,7 @@
   --color-bg: #ffeef6;
 
   /* Изображения */
-  --img-bg-cover: url(../images/cover-image-light.png);
+  --img-bg-cover: url(./images/cover-image-light.png);
 }
 
 /* REC для светлой темы */
@@ -33,7 +33,7 @@
     --color-bg: #ffeef6;
 
     /* Изображения */
-    --img-bg-cover: url(../images/cover-image-light.png);
+    --img-bg-cover: url(./images/cover-image-light.png);
   }
 
   /* REC для автоматической светлой темы */

@@ -20,10 +20,10 @@
   /* Отступы / размеры */
   --spacing-padding: 10px;
   --corner-size: 25px;
-  --corder-thickness: 1px;
+  --corner-thickness: 1px;
 
   /* Изображения */
-  --img-bg-cover: url(../images/cover-image-dark.png);
+  --img-bg-cover: url(./images/cover-image-dark.png);
 }
 
 @media (width >= 768px) {
