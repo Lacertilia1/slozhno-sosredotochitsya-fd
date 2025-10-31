@@ -15,11 +15,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.2",
     "del": "^6.0.0",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "postcss-sort-media-queries": "^5.2.0",
     "prettier": "^3.6.2",
     "serve": "^14.2.0",
     "stylelint": "^16.25.0"
