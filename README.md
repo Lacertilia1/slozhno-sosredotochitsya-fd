@@ -3,6 +3,7 @@
 > Что делать, когда не можешь делать ничего.  
 > Адаптивный одностраничник о концентрации, дофамине и том, почему «многозадачность» — миф.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/910bb79e-e572-4b2f-83ef-3b71fe004592/deploy-status)](https://app.netlify.com/projects/lacertilia1-slozhno-sosredotochitsya/deploys)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Репозиторий-181717?logo=github)](https://github.com/Lacertilia1/slozhno-sosredotochitsya-fd)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
