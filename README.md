@@ -30,7 +30,7 @@
 
 Посмотреть дизайн макета можно [в Figma](https://www.figma.com/design/lCqDbWjgllgJtb2hmCqfyX/-6-%D0%A1%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE-%D1%81%D0%BE%D1%81%D1%80%D0%B5%D0%B4%D0%BE%D1%82%D0%BE%D1%87%D0%B8%D1%82%D1%8C%D1%81%D1%8F?node-id=0-1&p=f&t=GEePfoK8FDb2D05b-0).
 
-<img width="1024" alt="Screenshot 2025-10-25 at 10 17 13" src="https://github.com/user-attachments/assets/024f3595-856f-4da5-9f92-2b6049956783" />
+<img width="1920" alt="Screenshot 2025-11-01 at 07 51 45" src="https://github.com/user-attachments/assets/41c1e986-ff2e-46a3-8397-54f5ad1a93db" />
 
 ## 📱 Добавь сайт на свой рабочий стол
 
